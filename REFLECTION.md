@@ -54,9 +54,11 @@ TODO 19: optimalRun(). Calls bestLoot from the root and prints the most profitab
 
 3. The Scene destructor starts by going into and through deleting all existing child scene pointers of the current scene. This deletion of these scene pointers recursively calls through those children until the whole tree is reached. Then, or if there are no children, it dynamically deletes the choices array. Finally it deletes the Data in the present Scene pointer, and this step is guaranteed to happen for every scene pointer it visits. It has to visit every node of the tree because a scene owns all of its children, grandchildren, and data.
 
-5. bestLoot 
 
-6. My game uses search() to check if an item is already in inventory, if not then addFront() is used to insert it. addFront is always O(1), but as the list grows search cost O(n) because to reach node for comparison it mus travel from the head node until it finds the target.
+5. bestLoot tries every path, but runs O(n) becuase it only visites every scene once though the recursive process. Every finished path ends at a leaf, and a tree cannot have more leaves than scenes, and the amount of work grows with the number of scenes which means the number of times the recursion runs grows  in O(n) time.
+
+
+6. My game uses search() to check if an item is already in inventory, if not then addFront() is used to insert it. addFront is always O(1), but as the list grows search cost O(n) because to reach each node for comparison it must travel from the head node until it finds the target.
 
 
     
