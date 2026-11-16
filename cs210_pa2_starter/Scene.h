@@ -22,10 +22,6 @@ public:
         // A scene with numChoices_ choices needs exactly numChoices_ slots.
         // An ending (0 choices) needs no slots at all.
         // Every slot must start out empty.
-
-        /*
-         * need to check if < MAX_CHOICES???
-         */
         if (numChoices_ > 0) {
             choices_ = new Scene<T>*[numChoices_];
         }
@@ -73,10 +69,6 @@ public:
     // TODO 5: put next into slot index.
     // Do nothing if index is not a real slot.
 
-    /*
-     * does set overwrite a filled slot, or only set empty slots????
-     * currently risk memory leak !!!
-     */
     void setChoice(int index, Scene<T>* next) {
         if (index < numChoices_ && index >= 0) {
             choices_[index] = next;
