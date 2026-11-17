@@ -55,6 +55,16 @@ TODO 19: optimalRun(). Calls bestLoot from the root and prints the most profitab
 3. The Scene destructor starts by going into and through deleting all existing child scene pointers of the current scene. This deletion of these scene pointers recursively calls through those children until the whole tree is reached. Then, or if there are no children, it dynamically deletes the choices array. Finally it deletes the Data in the present Scene pointer, and this step is guaranteed to happen for every scene pointer it visits. It has to visit every node of the tree because a scene owns all of its children, grandchildren, and data.
 
 
+4. Greedy loses because being greedy is a deadly sin in the mythology of my_story, constantly choosing whatever immediate option presents material gain for the player takes you on a path of loss, the more you receive, the less you have. Also the function does not care for survivability of paths like in the Optimal run. These are the paths taken by greedy and optimal: Greedy advisor
+   Path: 2-1-2-2
+   Loot: 999
+   Result: died
+   Optimal advisor
+   Path: 1-1-1-1-2
+   Loot: 13
+   Result: reached an ending
+
+
 5. bestLoot tries every path, but runs O(n) becuase it only visites every scene once though the recursive process. Every finished path ends at a leaf, and a tree cannot have more leaves than scenes, and the amount of work grows with the number of scenes which means the number of times the recursion runs grows  in O(n) time.
 
 

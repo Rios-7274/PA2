@@ -1,6 +1,162 @@
 START_HP 10
-SCENE Replace this file with your own story.
+SCENE AHHH! you don't have much time left to live! you are going to DIE if you don't replace your heart with an ARC REACTOR(like in iron man)
 HP 0
 LOOT 0
 ITEM none
-CHOICES 0
+CHOICES 2
+LABEL Build one! Duh-(like iron man)
+    SCENE You go to school for Energy research and engineering and graduate with maximum effort! that took time...
+    HP -5
+    LOOT +1
+    ITEM Degree in Energy
+    CHOICES 1
+    LABEL Get to building
+        SCENE You put your hard-earned knowledge to work and construct V1 of your Arc Reactor. It fails.
+        HP -1
+        LOOT 0
+        ITEM BrokenReactorV1
+        CHOICES 1
+        LABEL Try again?
+            SCENE mistakes are lessons towards success, you push forward and attempt a V2... it fails.
+            HP -1
+            LOOT 0
+            ITEM BrokenReactorV2
+            CHOICES 1
+            LABEL Try Try again?
+                SCENE You don't give up. V3 is in construction, though creating an arc reactor is much more difficult than you thought. it fails.
+                HP -1
+                LOOT 0
+                ITEM BrokenReactorV3
+                CHOICES 2
+                LABEL DONT GIVE UP!!!
+                    SCENE V4 is looking good... but wait, how will you replace it for your heart? there's no time for medical school...
+                    HP -1
+                    LOOT 0
+                    ITEM PotentialReactor
+                    CHOICES 2
+                    LABEL Do it anyway, whatever it takes to live.
+                        SCENE With your engineering know how, and with the desperate help of Artificial intelligence, you use the energy of your past arc reactors to create a mechanically automated procedure to power your body through the arc reactors energy. It succeeds, and you live, but not for long, you forgot about the palladium poisoning.
+                        HP 0
+                        LOOT 0
+                        ITEM none
+                        CHOICES 0
+                    LABEL just live
+                        SCENE After every failure, the stress, the effort, you're tired... You can't run from the dread of your mortality, or the academic burn out, or the aching uncertainty of the procedure, so you don't run. You step out of the lab, you put on your favorite music, and you walk. This is your last day.
+                        HP 0
+                        LOOT 0
+                        ITEM none
+                        CHOICES 3
+                        LABEL Go to your favorite restaurant
+                            SCENE You approach your favorite restaurant, it closed years ago, and you have more memories of craving the food itself rather than actually eating there, but you walk in anyway. It's a new interior, they serve something called Shawarma, huh, never tried it, but was always curious, you order for yourself. It's pretty good, but not like the old place, not like home.
+                            HP -1
+                            LOOT 3
+                            ITEM Shawarma
+                            CHOICES 0
+                        LABEL Get Ice Cream
+                            SCENE You approach a proper ice cream shop.
+                            HP 0
+                            LOOT 0
+                            ITEM none
+                            CHOICES 3
+                            LABEL Vanilla
+                                SCENE You walk out with your Ice Cream. The flavor never got old, though the flavor isn't what you notice, it's the texture. you can't remember the last time you had ice cream that didn't come in a frozen bucket, this scoop is really good... was it always this good?
+                                HP -1
+                                LOOT 1
+                                ITEM Vanilla Ice Cream
+                                CHOICES 0
+                            LABEL CHOCOLATE
+                                SCENE You walk out with your Ice Cream. You never had chocolate as your first pick, its both what you remember and not somehow, like you're trying it for the first time. You like it, it may not be the best, but you wouldn't change a thing.
+                                HP -1
+                                LOOT 1
+                                ITEM Chocolate Ice Cream
+                                CHOICES 0
+                            LABEL Peanut Butter
+                                SCENE You walk out with your Ice Cream. You didn't know they made peanut butter ice cream, but you certainly don't regret choosing it. It's great... why didn't you try it sooner?
+                                HP -1
+                                LOOT 1
+                                ITEM Peanut Butter Ice Cream
+                                CHOICES 0
+                        LABEL Go Home
+                            SCENE Your earbuds run out of battery on the way back. You check your phone, it turns out news travels faster than you. Your arc reactor and research have been found and while it may not be used as your life force, the energy it produces could mean good things for the future in the hands of the right people. You contributed, the world moves on, one day to be powered safely by the thing you dedicated your life to.
+                            HP -1
+                            LOOT 0
+                            ITEM none
+                            CHOICES 0
+                LABEL Watch the Iron Man movie for motivation.
+                    SCENE You watch Iron Man. It's been a while since you've seen it, that was pretty cool, and you are suddenly craving Randy's Donuts. You feel like watching the second one now, what happens in that one again? wait, what was I doing?
+                    HP 0
+                    LOOT 12
+                    ITEM A dozen Donuts
+                    CHOICES 0
+LABEL go to the Lemonade Stand
+    SCENE You approach the nice fellow working at the lemonade stand, you also conveniently found 5 bucks on the floor.
+    HP -1
+    LOOT 5
+    ITEM none
+    CHOICES 2
+    LABEL Got any grapes?
+       SCENE The fellow does in fact have grapes, you purchase a bundle
+       HP -1
+       LOOT 24
+       ITEM none
+       CHOICES 2
+       LABEL Come back the very next day
+            SCENE You approach the lemonade stand, but collapse suddenly, your last words: "got any grapes... hospital, h-hopital, hopi- 911. someone call-oughh. bleh"
+            HP -99
+            LOOT 0
+            ITEM none
+            CHOICES 0
+       LABEL WAR AGAINST THE MARMOTS!!!
+            SCENE in an epic battle against the madness(official term for gathering of marmots), you take out as many as you can with your trusty fist, but you are distracted by another 5 dollar bill and they overpower you. You are knocked unconscious, then you wake up and... welcome. to. HELL
+            HP 658
+            LOOT 5
+            ITEM none
+            CHOICES 2
+            LABEL take a walk down Hell broadway
+                SCENE You find none other than Nikola Tesla taking his third walk of the day, hell pigeons seem to be ever-feeding off his ever-regenerating flesh, a cruel and unusual punishment.
+                HP 0
+                LOOT 0
+                ITEM none
+                CHOICES 2
+                LABEL ask if he knows anything about an arc reactor
+                    SCENE he seems rather agitated, spewing blurbs of nonsense and anguish, but in his occasional moments of clarity you discover that he has invented and is in possession of a functioning and clean arc reactor. He hands it to you in exchange for 3 grapes.
+                    HP 0
+                    LOOT -3
+                    ITEM arcReactor
+                    CHOICES 1
+                    LABEL press '1' for divine intervention
+                        SCENE you are rewarded for your generosity and are returned tot he land of the living. But the twist: you are re-incarnated as a marmot, who is also in possession of an arc reactor and various goodies. You are traveled through time until that very day.
+                        HP -656
+                        LOOT 0
+                        ITEM MarmotThings
+                        CHOICES 2
+                        LABEL stop your human self from fighting the madness.
+                            SCENE you present the arc reactor to your human self before the fight begins, reminding them of their mysterious disease and offering life. Your human self accepts this and leaves with the object for their survival while you get to live the rest of your days a peaceful madness member.
+                            HP 0
+                            LOOT -1
+                            ITEM none
+                            CHOICES 0
+                        LABEL don't stop your human self from fighting the marmots.
+                            SCENE you are beaten, the cycle continues...
+                            HP -10
+                            LOOT 0
+                            ITEM none
+                            CHOICES 0
+                LABEL Got any grapes?
+                SCENE Tesla: "what?". you failed the test, Damned are the greedy.
+                HP -1332
+                LOOT 0
+                ITEM none
+                CHOICES 0
+            LABEL go to the hell lemonade stand
+                SCENE you approach the evil fellow at the stand, before you can speak you are sentenced to your eternally greedy damnation.
+                HP -1332
+                LOOT 965
+                ITEM none
+                CHOICES 0
+    LABEL yeah, uhh, I would like uhh, a lemonade please... large. whats that? oh yeah, to go, I guess haha... thank you
+       SCENE You forgot you are deathly allergic to lemons. You didn't even let life give them to you, you just bought them yourself. You defy Nature.
+       HP -24
+       LOOT 1
+       ITEM lemonade
+       CHOICES 0
